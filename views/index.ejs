@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+
+<form action="/search" method="post">
+    标题：<input type="text" name="s_title">
+    <input type="submit" value="查询">
+</form>
+
+<% for(var i = 0; i < datas.length; i++) {%>
+
+    <p><a href="/<%= datas[i].id %>"><%= datas[i].title %></a></p>
+
+<% } %>
+
+<a href="/add">发布</a>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改页面</title>
+</head>
+<body>
+<a href="/">返回首页</a>
+<form action="/update/<%= datas[0].id %>" method="post">
+    标题：<input type="text" name="title" value="<%= datas[0].title %>"><br><br>
+    内容：<textarea name="content" rows='10', cols='100'><%= datas[0].content %></textarea><br><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
